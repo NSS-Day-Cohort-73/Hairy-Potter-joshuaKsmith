@@ -6,7 +6,6 @@ import { PotteryList } from './potteryList.js'
 
 
 // Make 5 pieces of pottery at the wheel
-debugger
 let raw0 = makePottery("vase", 4, 6)
 let raw1 = makePottery("urn", 7, 3)
 let raw2 = makePottery("cup", 2, 2)
