@@ -120,12 +120,33 @@ In the `main.js` module, invoke the `PotteryList` component function. Take its r
 > 🧨 Before you click the "Assessment Complete" button on the Learning Platform, add your answers below for each question and make a commit. It is your option to request a face-to-face meeting with a coach for a vocabulary review.
 
 1. Explain how you got the HTML, with the correct data, displayed in the browser?
-   > Your answer here
+   >  1. Define variables for raw, unfired pottery items, assigning them the value returned by the `makePottery` function, passing in 3 arguments: a string indicating shape, a number indicating weight, and a number indicating height.
+   >  2. The `makePottery` function constructs and returns an object with 4 attributes, using the 3 parameters and an incremented `primaryKey` variable as their assigned values.
+   >  3. Define variables for cooked, fired pottery items, assigning them the value returned by the `firePottery` function, passing in 2 arguments: a previously stored raw variable, and a number indicating the temperature the pottery item will be fired at.
+   >  4. The `firePottery` function constructs and returns and updated object -- first adding to the passed object a `fired` attribute with the value `true` -- second comparing the passed temperature to a constant `maxSafeTemp` and adding to the passed object a `cracked` attribute with the value `true` or `false` as appropriate with an `if..else` conditional block.
+   >  5. The `ToSellOrNotToSell` function is invoked for each pottery item, which populates a catalog array -- comparing the value of each pottery item's weight attribute to a constant `weightBreakpoint` and adding to the passed object a `price` attribute with the value `20` or `40` as appropriate with an `if..else` conditional block.
+   >  6. Define a variable for pottery items fit for sale, assigning the value returned by the `PotteryList` function.
+   >  7. The `PotteryList` function defines constant `menuList`, assigning the value returned by the function `usePottery`.
+   >  8. The `usePottery` function simply returns the catalog array previously populated by the function `ToSellOrNotToSell`.
+   >  9. The `PotteryList` function proceeds to construct and return an HTML string `renderedString`, using string interpolation and templates in a `for..of` loop.
+   > 10. Define a variable for the HTML class `potteryList`, assigning the value with the `getElementsByClassName` method.
+   > 11. Reassign the .innerHTML of the HTML class `potteryList` with the constructed HTML string.
+    
+
+
 2. In the **PotteryList** module, when you iterate your pottery, you need to show the evidence of what the **weight** property's value is for the 2nd piece of pottery. Use [Loom](https://www.loom.com/) to record your browser window with the developer tools open and show those values.
-   > Paste your video's public URL here
+   > (https://www.loom.com/share/7a101720e33048409cf61c9cbc2b4a75)
+
+
 3. The **PotteryWheel** module has a single function named `makePottery`. Why doesn't that module have all of the other code in it?
-   > Your answer here
+   > It is good design practice to limit each function to a sole responsibility.
+
+
 4. The pottery shop has learned that there is a set of customers that are willing to buy cracked pottery at a discounted price of $2.50. That means that the cracked pottery should now be displayed in the catalog. Explain the changes that this new business strategy would cause to your algorithm.
-   > Your answer here
+   > 1. Rename ToSellOrNotToSell function to better reflect that all objects now get a price.
+   > 2. Update logic and variable names to account for the new price threshold, allowing the catalog to be properly populated.
+
+
 5. In the **Kiln** module, you have a `firePottery()` function. You need to demonstrate how to use the debugger to verify the values of the parameters for that function when your code runs. Use [Loom](https://www.loom.com/) to record your browser window with the developer tools open and show those values.
-   > Paste your video's public URL here
+   > (https://www.loom.com/share/beb692fdbab04aeeaffcd91808b45c7e)
+
